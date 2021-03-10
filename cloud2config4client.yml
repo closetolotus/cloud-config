@@ -1,11 +1,11 @@
 spring:
   profiles:
-    active: dev 
+    active: dev1
 ---
 server:
   port: 8211
 spring:
-  profiles: dev
+  profiles: dev1
   application:
     name: cloud-config-client
 eureka:
@@ -53,7 +53,7 @@ eureka:
 server:
   port: 8231
 spring:
-  profiles: prod
+  profiles: prod1
   application:
     name: cloud-config-client
 eureka:

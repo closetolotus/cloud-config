@@ -1,0 +1,63 @@
+spring:
+  profiles:
+    active: dev 
+---
+server:
+  port: 8211
+spring:
+  profiles: dev
+  application:
+    name: cloud-config-client
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-dev.com:7001/eureka
+---
+server:
+  port: 8221
+spring:
+  profiles: test1
+  application:
+    name: cloud-config-client
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-test.com:7001/eureka
+---
+server:
+  port: 8222
+spring:
+  profiles: test2
+  application:
+    name: cloud-config-client
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-test.com:7001/eureka
+---
+server:
+  port: 8223
+spring:
+  profiles: test3
+  application:
+    name: cloud-config-client
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-test.com:7001/eureka
+---
+server:
+  port: 8231
+spring:
+  profiles: prod
+  application:
+    name: cloud-config-client
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-prod.com:7001/eureka

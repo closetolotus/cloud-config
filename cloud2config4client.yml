@@ -1,11 +1,11 @@
 spring:
   profiles:
-    active: dev1
+    active: dev
 ---
 server:
-  port: 8211
+  port: 8201
 spring:
-  profiles: dev1
+  profiles: dev
   application:
     name: cloud-config-client
 eureka:
@@ -15,9 +15,9 @@ eureka:
       defaultZone: http://eureka-dev.com:7001/eureka
 ---
 server:
-  port: 8221
+  port: 8202
 spring:
-  profiles: test1
+  profiles: test
   application:
     name: cloud-config-client
 eureka:
@@ -27,33 +27,9 @@ eureka:
       defaultZone: http://eureka-test.com:7001/eureka
 ---
 server:
-  port: 8222
+  port: 8203
 spring:
-  profiles: test2
-  application:
-    name: cloud-config-client
-eureka:
-  client:
-    register-with-eureka: false
-    service-url:
-      defaultZone: http://eureka-test.com:7001/eureka
----
-server:
-  port: 8223
-spring:
-  profiles: test3
-  application:
-    name: cloud-config-client
-eureka:
-  client:
-    register-with-eureka: false
-    service-url:
-      defaultZone: http://eureka-test.com:7001/eureka
----
-server:
-  port: 8231
-spring:
-  profiles: prod1
+  profiles: prod
   application:
     name: cloud-config-client
 eureka:

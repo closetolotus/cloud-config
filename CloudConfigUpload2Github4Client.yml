@@ -12,6 +12,7 @@ spring:
     name: cloud-config-client
 eureka:
   client:
+    register-with-eureka: false
     service-url:
       defaultZone: http://eureka-dev.com:7001/eureka
 
@@ -24,6 +25,7 @@ spring:
     name: cloud-config-client
 eureka:
   client:
+    register-with-eureka: false
     service-url:
       defaultZone: http://eureka-test.com:7001/eureka
 
@@ -36,5 +38,6 @@ spring:
     name: cloud-config-client
 eureka:
   client:
+    register-with-eureka: false
     service-url:
       defaultZone: http://eureka-prod.com:7001/eureka
